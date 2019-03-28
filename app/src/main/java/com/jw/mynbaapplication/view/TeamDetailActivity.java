@@ -53,6 +53,8 @@ public class TeamDetailActivity extends AppCompatActivity {
                 .placeholder(R.drawable.load)
                 .into(imageView);
 
+
+
 //        getSupportActionBar().setTitle("Team Details Activity");
 
     }
