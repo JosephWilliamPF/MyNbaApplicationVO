@@ -6,7 +6,7 @@ import retrofit2.http.GET;
 
 public class Team {
 
-    public static final String BASE_URL = "https://augustinmorieux.github.io";
+    public static final String BASE_URL = "https://josephwilliampf.github.io";
     public static Retrofit retrofit = null;
 
     public static Retrofit getTeam(){

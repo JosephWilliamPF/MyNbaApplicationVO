@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface TeamAPI {
-    @GET("/nba.Json")
+    @GET("/apinba.Json")
     Call<ItemResponse> getItems();
 }
