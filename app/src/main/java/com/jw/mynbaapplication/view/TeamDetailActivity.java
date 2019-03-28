@@ -1,5 +1,6 @@
 package com.jw.mynbaapplication.view;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
@@ -19,9 +20,11 @@ import com.jw.mynbaapplication.R;
 public class TeamDetailActivity extends AppCompatActivity {
     TextView Location;
     TextView Teamname;
+    TextView Arena;
     Toolbar mActionBarToolbar;
     ImageView imageView;
 
+    @SuppressLint("SetTextI18n")
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teamdetail);
@@ -30,15 +33,19 @@ public class TeamDetailActivity extends AppCompatActivity {
 
         imageView = (ImageView) findViewById(R.id.team_image_header);
         Teamname = (TextView) findViewById(R.id.header);
-
         Location = (TextView) findViewById(R.id.location);
+        Arena = (TextView) findViewById(R.id.arena);
 
         String teamname = getIntent().getExtras().getString("name");
         String logo = getIntent().getExtras().getString("logo");
         String location = getIntent().getExtras().getString("location");
+        String arena = getIntent().getExtras().getString("arena");
 
         Location.setText(location);
+        Arena.setText("Arena : " + arena);
+
         Linkify.addLinks(Location, Linkify.WEB_URLS);
+        Linkify.addLinks(Arena, Linkify.WEB_URLS);
 
         Teamname.setText(teamname);
         Glide.with(this)
@@ -53,6 +60,7 @@ public class TeamDetailActivity extends AppCompatActivity {
     private Intent createShareForcastIntent(){
         String teamname = getIntent().getExtras().getString("name");
         String location = getIntent().getExtras().getString("location");
+
         Intent shareIntent = ShareCompat.IntentBuilder.from(this)
                 .setType("text/plain")
                     .setText(" Check This Team @ "+ teamname + " based in" +location)

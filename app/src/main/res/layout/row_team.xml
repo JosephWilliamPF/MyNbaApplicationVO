@@ -45,12 +45,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="4dp"
             android:layout_toRightOf="@+id/logo"
             android:text="Location"
             android:textAppearance="?android:textAppearanceLarge"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
 
     </RelativeLayout>

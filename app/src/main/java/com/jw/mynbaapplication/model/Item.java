@@ -17,11 +17,16 @@ public class Item {
     @Expose
     private String locationT;
 
-    public Item(String name, String logoUrl, String locationT){
+    @SerializedName("arena")
+    @Expose
+    private String arenaT;
+
+    public Item(String name, String logoUrl, String locationT, String arenaT){
 
         this.name = name;
         this.logoUrl = logoUrl;
         this.locationT = locationT;
+        this.arenaT = arenaT;
     }
 
 
@@ -47,6 +52,14 @@ public class Item {
 
     public void setLocationT(String locationT){
         this.locationT = locationT;
+    }
+
+    public String getArenaT(){
+        return arenaT;
+    }
+
+    public void setArenaT(String arenaT){
+        this.arenaT = arenaT;
     }
 
 }

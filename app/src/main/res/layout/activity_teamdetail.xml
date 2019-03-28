@@ -26,38 +26,33 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/team_image_header"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="24dp"
         android:text="Team Name"
         android:textAlignment="center"
         android:textSize="25dp"
         android:textStyle="bold" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/teamName"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="3dp"
-        android:textSize="20dp"
-        android:layout_below="@+id/header"/>
 
     <TextView
         android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/teamName"
+        android:layout_below="@+id/header"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="10dp"
         android:text="Team Location"
         android:textAlignment="center"
         android:textSize="25dp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
+
     <TextView
+        android:id="@+id/arena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/simpleName"
+        android:layout_below="@+id/location"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="3dp"
-        android:textSize="20dp"
-        android:layout_below="@+id/location"/>
+        android:layout_marginTop="17dp"
+        android:text="Team Arena"
+        android:textAlignment="center"
+        android:textSize="20dp" />
 
 </RelativeLayout>

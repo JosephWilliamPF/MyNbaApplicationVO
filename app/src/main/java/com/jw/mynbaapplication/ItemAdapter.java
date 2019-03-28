@@ -39,6 +39,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         viewHolder.title.setText(items.get(i).getName());
         viewHolder.locationT1.setText(items.get(i).getLocationT());
 
+
+
         Picasso.with(context)
                 .load(items.get(i).getLogoUrl())
                 .placeholder(R.drawable.load)
@@ -58,6 +60,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         private ImageView imageView;
 
 
+
         public ViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
@@ -75,9 +78,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                         intent.putExtra("name", items.get(pos).getName());
                         intent.putExtra("location", items.get(pos).getLocationT());
                         intent.putExtra("logo", items.get(pos).getLogoUrl());
+                        intent.putExtra("arena",items.get(pos).getArenaT());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
-                        Toast.makeText(v.getContext(), "You clicked" + clickedDataItem.getName(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(v.getContext(), "You clicked on " + clickedDataItem.getName(), Toast.LENGTH_SHORT).show();
                     }
 
                 }
