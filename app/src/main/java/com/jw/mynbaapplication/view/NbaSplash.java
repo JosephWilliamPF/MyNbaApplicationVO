@@ -44,6 +44,7 @@ public class NbaSplash extends AppCompatActivity {
                     startActivity(i);
                     finish();
 
+
                 }
             }
         };
