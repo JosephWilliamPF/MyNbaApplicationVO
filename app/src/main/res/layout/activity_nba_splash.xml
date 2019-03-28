@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/sb8"
     tools:context=".view.NbaSplash">
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="231dp">
 
         <ImageView
             android:id="@+id/iv"
-            android:layout_width="369dp"
-            android:layout_height="313dp"
+            android:layout_width="343dp"
+            android:layout_height="294dp"
             android:layout_gravity="center"
-            android:src="@drawable/nbalogo" />
+            android:src="@drawable/nbalog" />
 
         <TextView
             android:id="@+id/tv"
@@ -26,9 +28,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/archivo_black"
             android:text="@string/nba_team"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/nbaColor"
             android:textSize="36sp"
             android:textStyle="bold" />
 

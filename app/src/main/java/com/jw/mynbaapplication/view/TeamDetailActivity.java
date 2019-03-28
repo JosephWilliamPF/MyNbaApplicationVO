@@ -41,8 +41,8 @@ public class TeamDetailActivity extends AppCompatActivity {
         String location = getIntent().getExtras().getString("location");
         String arena = getIntent().getExtras().getString("arena");
 
-        Location.setText(location);
-        Arena.setText("Arena : " + arena);
+        Location.setText(" " +location);
+        Arena.setText(" " + arena);
 
         Linkify.addLinks(Location, Linkify.WEB_URLS);
         Linkify.addLinks(Arena, Linkify.WEB_URLS);

@@ -2,7 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sb7"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/detail"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/team_image_header"
@@ -15,7 +27,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:fitsSystemWindows="true"
@@ -30,7 +42,8 @@
         android:layout_marginTop="24dp"
         android:text="Team Name"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textColor="@color/detail"
+        android:textSize="40dp"
         android:textStyle="bold" />
 
     <TextView
@@ -41,9 +54,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="Team Location"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textStyle="bold|italic" />
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/detail"
+        />
 
     <TextView
         android:id="@+id/arena"
@@ -53,7 +68,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="17dp"
         android:text="Team Arena"
-        android:textAlignment="center"
-        android:textSize="20dp" />
+        android:drawableLeft="@drawable/ic_home_black_24dp"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/detail"
+        />
 
 </RelativeLayout>
