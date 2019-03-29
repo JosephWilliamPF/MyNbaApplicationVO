@@ -84,7 +84,6 @@ Lorsque l’on ouvre l'application, la première activité qui s'affiche est une
 
 ![IMG_1](https://github.com/JosephWilliamPF/MyNbaApplicationVO/blob/master/NbaScreen/NbaTeam.gif)
 
-### Deux Ecrans:
 ![IMG_3](https://github.com/JosephWilliamPF/MyNbaApplicationVO/blob/master/NbaScreen/Refreshed.gif)
 
 
