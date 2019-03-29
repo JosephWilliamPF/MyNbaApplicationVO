@@ -51,7 +51,7 @@ La structure de mon API est la suivante:
 {
 	"count":30,
 
-	"results":[
+	"results":[IMG_1.gif
 
 	{
         "abbreviation": "ATL",
@@ -82,10 +82,10 @@ Le GItFlow à été développé avec GitKraken et contient une branche :
 * Splash Screen :
 Lorsque l’on ouvre l'application, la première activité qui s'affiche est une introduction qui dure 5 secondes.
 
-![IMG_1](https://github.com/AugustinMorieux/Pantone-AndroidApp/blob/Dev/IMG_1.gif)
+![IMG_1](https://github.com/JosephWilliamPF/MyNbaApplicationVO/blob/master/NbaScreen/NbaTeam.gif)
 
 ### Deux Ecrans:
-![IMG_3](https://github.com/AugustinMorieux/Pantone-AndroidApp/blob/Dev/IMG_3.png)
+![IMG_3](https://github.com/JosephWilliamPF/MyNbaApplicationVO/blob/master/NbaScreen/Refreshed.gif)
 
 
 
