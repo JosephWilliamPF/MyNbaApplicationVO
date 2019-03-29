@@ -37,6 +37,8 @@ NBA TEAM est une application sous Android studio permettant d'afficher toutes le
 
 ### Appel WebService à  une API Rest:
 
+Lien vers l'API : https://github.com/JosephWilliamPF/JosephWilliamPF.github.io/blob/master/apinba.Json
+
 Je fais appel à une API que j'ai créé qui regroupe : 
 * abbreviation : abbréviation du nom de l'équipe 
 * name : nom de l'équipe
