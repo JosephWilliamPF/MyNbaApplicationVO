@@ -34,6 +34,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder viewHolder, int i) {
         viewHolder.title.setText(items.get(i).getName());

@@ -53,11 +53,10 @@ public class TeamDetailActivity extends AppCompatActivity {
                 .placeholder(R.drawable.load)
                 .into(imageView);
 
-
-
 //        getSupportActionBar().setTitle("Team Details Activity");
-
     }
+
+
 
     private Intent createShareForcastIntent(){
         String teamname = getIntent().getExtras().getString("name");
@@ -68,8 +67,9 @@ public class TeamDetailActivity extends AppCompatActivity {
                     .setText(" Check This Team @ "+ teamname + " based in" +location)
                     .getIntent();
         return shareIntent;
-
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,6 +78,5 @@ public class TeamDetailActivity extends AppCompatActivity {
         MenuItem menuItem = menu.findItem(R.id.action_share);
         menuItem.setIntent(createShareForcastIntent());
         return true;
-
     }
 }
