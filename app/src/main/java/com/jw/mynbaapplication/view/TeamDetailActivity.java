@@ -21,6 +21,7 @@ public class TeamDetailActivity extends AppCompatActivity {
     TextView Location;
     TextView Teamname;
     TextView Arena;
+    TextView SimpleName;
     Toolbar mActionBarToolbar;
     ImageView imageView;
 
@@ -29,7 +30,7 @@ public class TeamDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teamdetail);
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         imageView = (ImageView) findViewById(R.id.team_image_header);
         Teamname = (TextView) findViewById(R.id.header);
@@ -53,9 +54,8 @@ public class TeamDetailActivity extends AppCompatActivity {
                 .placeholder(R.drawable.load)
                 .into(imageView);
 
-//        getSupportActionBar().setTitle("Team Details Activity");
+        //getSupportActionBar().setTitle("Team Details Activity");
     }
-
 
 
     private Intent createShareForcastIntent(){
@@ -78,5 +78,22 @@ public class TeamDetailActivity extends AppCompatActivity {
         MenuItem menuItem = menu.findItem(R.id.action_share);
         menuItem.setIntent(createShareForcastIntent());
         return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

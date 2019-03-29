@@ -1,4 +1,4 @@
-package com.jw.mynbaapplication;
+package com.jw.mynbaapplication.controller;
 
 import com.jw.mynbaapplication.model.ItemResponse;
 

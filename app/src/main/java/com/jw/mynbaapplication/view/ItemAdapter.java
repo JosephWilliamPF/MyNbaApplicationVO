@@ -1,4 +1,4 @@
-package com.jw.mynbaapplication;
+package com.jw.mynbaapplication.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jw.mynbaapplication.controller.Team;
+import com.jw.mynbaapplication.R;
 import com.jw.mynbaapplication.model.Item;
-import com.jw.mynbaapplication.view.TeamDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -81,9 +80,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                         intent.putExtra("location", items.get(pos).getLocationT());
                         intent.putExtra("logo", items.get(pos).getLogoUrl());
                         intent.putExtra("arena",items.get(pos).getArenaT());
+                        intent.putExtra("simplename",items.get(pos).getSimpleName());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
-                        Toast.makeText(v.getContext(), "You clicked on " + clickedDataItem.getName(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(v.getContext(), "You clicked on " + clickedDataItem.getSimpleName(), Toast.LENGTH_SHORT).show();
                     }
 
                 }

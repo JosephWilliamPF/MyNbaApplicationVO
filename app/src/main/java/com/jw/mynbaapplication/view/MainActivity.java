@@ -11,9 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jw.mynbaapplication.ItemAdapter;
 import com.jw.mynbaapplication.R;
-import com.jw.mynbaapplication.TeamAPI;
+import com.jw.mynbaapplication.controller.TeamAPI;
 import com.jw.mynbaapplication.controller.Team;
 import com.jw.mynbaapplication.model.Item;
 import com.jw.mynbaapplication.model.ItemResponse;
