@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jw.mynbaapplication.R;
+import com.jw.mynbaapplication.controller.ItemAdapter;
 import com.jw.mynbaapplication.controller.TeamAPI;
 import com.jw.mynbaapplication.controller.Team;
 import com.jw.mynbaapplication.model.Item;
@@ -56,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
         pd.setMessage("Fetching");
         pd.setCancelable(false);
         pd.show();
-        recyclerView=(RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.smoothScrollToPosition(0);
         loadJSON();
     }
 
-    private void loadJSON(){
+    private void loadJSON() {
         Disconnected = (TextView) findViewById(R.id.disconnected);
-        try{
+        try {
             Team team = new Team();
             TeamAPI apiTeam =
                     Team.getTeam().create(TeamAPI.class);
@@ -88,9 +89,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.d("Error", e.getMessage());
             Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
+

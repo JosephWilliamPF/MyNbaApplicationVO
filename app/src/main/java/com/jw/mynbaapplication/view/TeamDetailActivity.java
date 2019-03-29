@@ -3,14 +3,10 @@ package com.jw.mynbaapplication.view;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.util.Linkify;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -22,7 +18,6 @@ public class TeamDetailActivity extends AppCompatActivity {
     TextView Teamname;
     TextView Arena;
     TextView SimpleName;
-    Toolbar mActionBarToolbar;
     ImageView imageView;
 
     @SuppressLint("SetTextI18n")
@@ -30,17 +25,20 @@ public class TeamDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teamdetail);
 
-       //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         imageView = (ImageView) findViewById(R.id.team_image_header);
         Teamname = (TextView) findViewById(R.id.header);
         Location = (TextView) findViewById(R.id.location);
         Arena = (TextView) findViewById(R.id.arena);
+        SimpleName = (TextView) findViewById(R.id.sName);
 
         String teamname = getIntent().getExtras().getString("name");
         String logo = getIntent().getExtras().getString("logo");
         String location = getIntent().getExtras().getString("location");
         String arena = getIntent().getExtras().getString("arena");
+        String simpleName = getIntent().getExtras().getString("simpleName");
+
+        Teamname.setText(teamname);
+        SimpleName.setText(simpleName);
 
         Location.setText(" " +location);
         Arena.setText(" " + arena);
@@ -48,52 +46,25 @@ public class TeamDetailActivity extends AppCompatActivity {
         Linkify.addLinks(Location, Linkify.WEB_URLS);
         Linkify.addLinks(Arena, Linkify.WEB_URLS);
 
-        Teamname.setText(teamname);
         Glide.with(this)
                 .load(logo)
                 .placeholder(R.drawable.load)
                 .into(imageView);
-
-        //getSupportActionBar().setTitle("Team Details Activity");
     }
 
 
-    private Intent createShareForcastIntent(){
-        String teamname = getIntent().getExtras().getString("name");
-        String location = getIntent().getExtras().getString("location");
+    public void redirectToHome(View v){
+        final Intent intent = new Intent(this, MainActivity.class);
 
-        Intent shareIntent = ShareCompat.IntentBuilder.from(this)
-                .setType("text/plain")
-                    .setText(" Check This Team @ "+ teamname + " based in" +location)
-                    .getIntent();
-        return shareIntent;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.teamdetail, menu);
-        MenuItem menuItem = menu.findItem(R.id.action_share);
-        menuItem.setIntent(createShareForcastIntent());
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (id == R.id.home) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

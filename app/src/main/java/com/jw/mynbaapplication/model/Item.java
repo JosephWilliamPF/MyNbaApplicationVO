@@ -21,18 +21,23 @@ public class Item {
     @Expose
     private String arenaT;
 
-    @SerializedName("simplename")
+    @SerializedName("simpleName")
     @Expose
     private String simpleName;
 
+    @SerializedName("abbreviation")
+    @Expose
+    private String abbreviationT;
 
-    public Item(String name, String logoUrl, String locationT, String arenaT, String simpleName){
+    public Item(String name, String logoUrl, String locationT, String arenaT, String simpleName, String abbreviationT){
 
         this.name = name;
         this.logoUrl = logoUrl;
         this.locationT = locationT;
         this.arenaT = arenaT;
         this.simpleName = simpleName;
+        this.abbreviationT = abbreviationT;
+
     }
 
 
@@ -74,6 +79,14 @@ public class Item {
 
     public void setSimpleName(String simpleName){
         this.simpleName = simpleName;
+    }
+
+    public String getAbbreviationT(){
+        return abbreviationT;
+    }
+
+    public void setAbbreviationT(String abbreviationT){
+        this.abbreviationT = abbreviationT;
     }
 
 }
